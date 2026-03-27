@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: kubernetes
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend  
+        name: backend-pod 
+        namespace: kubernetes
+    spec:
+      containers:
+      - name: backend-chatapp
+        image: mayrhatte09/chatapp-backend:latest
+        ports:
+        - containerPort: 5001 
+        env: 
+        - name: NODE_ENV
+          value: "production" 
+        - name: MONGO_URL # In mongodb-deployment.yaml file we have set env variable for username and password so we can use that here to connect to mongodb 
+          value: "mongodb://mayur:password@mongodb-service:27017/chatapp?authSource=admin"
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: chatapp-secrets
+              key: password
+        - name: PORT
+          value: "5001"

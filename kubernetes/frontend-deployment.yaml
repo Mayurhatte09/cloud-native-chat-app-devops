@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: kubernetes
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend  
+        name: frontend-pod 
+        namespace: kubernetes
+    spec:
+      containers:
+      - name: frontend-chatapp
+        image: mayrhatte09/chatapp-forntend:latest
+        ports:
+        - containerPort: 80 
+        env: 
+        - name: NODE_ENV
+          value: "production" 
