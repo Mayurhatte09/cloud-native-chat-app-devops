@@ -1,9 +1,10 @@
 
 ---
 
-# Cloud Native Chat App
+# Cloud Native Chat App DevOps
 
-This project is a full-stack chat application with a **frontend** (React + Vite + TailwindCSS), a **backend** (Node.js + Express + MongoDB), and deployment via **Kubernetes** using **Docker Desktop**. It also demonstrates usage of **Ingress** to route traffic via a custom domain (`chatapp.com`).
+A production-ready full-stack chat application built using modern DevOps practices.
+
 <!--- I built a cloud-native chat application where I used Docker for containerization, Kubernetes for orchestration, and Jenkins for CI/CD to simulate a production DevOps environment.--->
 
 
@@ -11,7 +12,7 @@ This project is a full-stack chat application with a **frontend** (React + Vite 
 
 ## Table of Contents
 
-- [Cloud Native Chat App](#cloud-native-chat-app)
+- [Cloud Native Chat App DevOps](#cloud-native-chat-app-devops)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Features](#features)
@@ -34,9 +35,7 @@ This project is a full-stack chat application with a **frontend** (React + Vite 
 ---
 
 ## Introduction
-
-This project provides a **real-time chat experience** that is scalable and production-ready.
-It demonstrates **DevOps practices** like containerization, orchestration, and CI/CD automation.
+This is a production-ready cloud-native chat application demonstrating real-world DevOps practices including CI/CD, containerization, and Kubernetes orchestration.
 
 ---
 
